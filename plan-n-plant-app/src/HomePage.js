@@ -1,7 +1,7 @@
 import React from "react";
 import getData from "./apiCalls";
 
-function plantsDisplay (){
+function PlantsDisplay (props){
 
   return(
     <div>
@@ -10,4 +10,4 @@ function plantsDisplay (){
     </div>
   )
 }
-export default plantsDisplay
+export default PlantsDisplay
