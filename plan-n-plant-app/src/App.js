@@ -4,12 +4,17 @@ import PlantsDisplay from './HomePage';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import getData from './apiCalls';
-
+import JournalEntry from './Journal';
+import SelectedPlant from './SelectedPlant';
 function App() {
   const [plants, setPlants] = useState([])
-
+  // const [date, setDate] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [entry, setEntry] = useState("");
+  
   useEffect(() =>{
-    fetch("https://perenual.com/api/species-list?page=1&key=sk-UpTm64c81a707233d1724")
+  
+    fetch("https://perenual.com/api/species-list?key=sk-UpTm64c81a707233d1724&watering=minimum&indoor=1")
     .then(response => response.json())
     .then(plants => {
       console.log(plants.data, "plantData")
@@ -22,17 +27,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {plants.map(plant => (
-          <div key={plant.id}>
-            {plant.common_name}
-            {plant.default_image && <img src={plant.default_image.regular_url} alt={plant.common_name} />}
-          </div>
-        ))}
-      <PlantsDisplay/>
-      </header>
+        <PlantsDisplay plants={plants} />
+        {/* <SelectedPlant /> */}
+        {/* <JournalEntry date={date} title={title} entry={entry} /> */}
     </div>
   );
 }
+
 
 export default App;
