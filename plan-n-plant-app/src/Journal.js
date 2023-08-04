@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
-const JournalEntry = () => {
+const JournalEntry = ({ handleSubmit }) => {
   const [date, setDate] = useState('');
   const [title, setTitle] = useState('');
   const [entry, setEntry] = useState('');
   const [journalEntries, setJournalEntries] = useState([]);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const newEntry = { date, title, entry };
-    setJournalEntries([...journalEntries, newEntry]);
-    setDate('');
-    setTitle('');
-    setEntry('');
-  }
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const newEntry = { date, title, entry };
+  //   setJournalEntries([...journalEntries, newEntry]);
+  //   setDate('');
+  //   setTitle('');
+  //   setEntry('');
+  // }
 
   return (
     <div className="journal">
