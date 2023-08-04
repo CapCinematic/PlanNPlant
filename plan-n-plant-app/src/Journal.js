@@ -29,7 +29,7 @@ const JournalEntry = () => {
         </label>
         <label>
           Entry:
-          <textarea value={entry} onChange={(event) => setEntry(event.target.value)} />
+          <textarea className="text-box" value={entry} onChange={(event) => setEntry(event.target.value)} />
         </label>
         <button type="submit">Add Entry</button>
       </form>

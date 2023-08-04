@@ -17,7 +17,7 @@ function App() {
     fetch("https://perenual.com/api/species-list?key=sk-UpTm64c81a707233d1724&watering=minimum&indoor=1")
     .then(response => response.json())
     .then(plants => {
-      console.log(plants.data, "plantData")
+      // console.log(plants.data, "plantData")
       setPlants(plants.data)
     })
     .catch(error => console.error(error));
