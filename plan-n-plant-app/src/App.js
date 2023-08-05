@@ -22,7 +22,7 @@ function App() {
       .then(data => {
         setPlants(data.data);
       })
-      .catch(error => setError(error));
+      .catch(error => console.log(error));
   }, []);
 
  
