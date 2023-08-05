@@ -1,0 +1,11 @@
+{
+  "plant": {
+    "common_name": "Snake Plant",
+    "id": 1,
+    "default_image": {
+      "thumbnail": "string"
+    },
+    "watering": "Low",
+    "sunlight": ["Low"]
+  }
+}
