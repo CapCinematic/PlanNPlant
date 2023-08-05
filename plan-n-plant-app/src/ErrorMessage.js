@@ -1,14 +1,17 @@
-// import React from "react";
-// import { useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-// const ErrorMessage = () => {
-//   const Error = ({message, setError})
-//   return(
-//     <div className="error-container">
-//       <div className="error-message">
-//         {message ? <p>{message}</p> : <p>Error! Oops!</p>}
-//       </div>
-//     </div>
-//   )
-// }
-// export default ErrorMessage
+const ErrorMessage = ({ message }) => {
+  return (
+    <div className="error-container">
+      <div className="error-message">
+        {message ? <p>{message}</p> : <p>Ooops, please try to reload or try again later!</p>}
+        <div className='home-button'>
+        <Link to="/"><p><span>⌂</span></p></Link> 
+      </div>
+      </div>
+    </div>
+  );
+};
+
+export default ErrorMessage;

@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const JournalEntry = ({ handleSubmit }) => {
-  const [date, setDate] = useState('');
-  const [title, setTitle] = useState('');
-  const [entry, setEntry] = useState('');
+const JournalEntry = () => {
+  const [date, setDate] = useState("");
+  const [title, setTitle] = useState("");
+  const [entry, setEntry] = useState("");
   const [journalEntries, setJournalEntries] = useState([]);
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const newEntry = { date, title, entry };
-  //   setJournalEntries([...journalEntries, newEntry]);
-  //   setDate('');
-  //   setTitle('');
-  //   setEntry('');
-  // }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newEntry = { date, title, entry };
+    setJournalEntries([...journalEntries, newEntry]);
+    setDate("");
+    setTitle("");
+    setEntry("");
+  };
 
   return (
     <div className="journal">
@@ -21,15 +22,27 @@ const JournalEntry = ({ handleSubmit }) => {
       <form onSubmit={handleSubmit}>
         <label>
           Date:
-          <input type="text" value={date} onChange={(event) => setDate(event.target.value)} />
+          <input
+            type="text"
+            value={date}
+            onChange={(event) => setDate(event.target.value)}
+          />
         </label>
         <label>
           Title:
-          <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
+          <input
+            type="text"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+          />
         </label>
         <label>
           Entry:
-          <textarea className="text-box" value={entry} onChange={(event) => setEntry(event.target.value)} />
+          <textarea
+            className="text-box"
+            value={entry}
+            onChange={(event) => setEntry(event.target.value)}
+          />
         </label>
         <button type="submit">Add Entry</button>
       </form>
@@ -45,6 +58,13 @@ const JournalEntry = ({ handleSubmit }) => {
       </ul>
     </div>
   );
-}
+};
 
+JournalEntry.propTypes = {
+  date: PropTypes.string,
+  title: PropTypes.string,
+  entry: PropTypes.string,
+  journalEntries: PropTypes.arrayOf(PropTypes.object),
+  handleSubmit: PropTypes.func,
+};
 export default JournalEntry;

@@ -2,47 +2,48 @@ import React from "react";
 import JournalEntry from "./Journal";
 import { useState, useEffect } from "react";
 import getData from "./apiCalls";
-import { useParams } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
+import PropTypes from "prop-types";
+import ErrorMessage from "./ErrorMessage";
 
 function SelectedPlant() {
   const { id } = useParams();
-  const [selectedPlant, setSelectedPlant] = useState({});
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [selectedPlant, setSelectedPlant] = useState(undefined);
   const [viewJournal, setView] = useState(false);
   const handleView = () => setView(true);
-  const handleClose = () => setView(false);
-
   console.log("selected", selectedPlant);
-  useEffect(() => {
-    if (selectedPlant) {
-      const apiKey = "sk-M3Xs64cda388bdd101768";
-      const plantId = selectedPlant.id;
-      const plantDetailsQuery = `/details/${id}?key=${apiKey}`;
 
-      getData(plantDetailsQuery)
-        .then((data) => setSelectedPlant(data))
-        .catch((error) => console.error(error));
-    }
+  useEffect(() => {
+    const apiKey = "sk-M3Xs64cda388bdd101768";
+    const plantDetailsQuery = `/details/${id}?key=${apiKey}`;
+    getData(plantDetailsQuery)
+      .then((data) => setSelectedPlant(data))
+      .catch((error) => setErrorMessage(error.errorMessage));
   }, []);
 
   if (!selectedPlant) {
-    return <p>Please select a plant.</p>;
+    return  <ErrorMessage message={errorMessage}  />
   }
 
   return (
     <div>
+       <div className='home-button'>
+        <Link to="/"><p><span>⌂</span></p></Link> 
+      </div>
       <h2>{selectedPlant.common_name}</h2>
       {selectedPlant && (
         <div>
           <p>Scientific name: {selectedPlant.scientific_name}</p>
           <p>Description: {selectedPlant.description}</p>
-          <p>Family: {selectedPlant.family_common_name}</p>
+          <p>Cycle: {selectedPlant.cycle}</p>
           <img
-            src={selectedPlant.default_image}
+            src={selectedPlant.default_image.thumbnail}
             alt={selectedPlant.common_name}
           />
           <div className="journal-box">
-            <h3 onClick={handleView}>Journal</h3>
-            {viewJournal && <JournalEntry handleClose={handleClose} />}
+            <button className='journal-open' onClick={handleView}>Journal</button>
+            {viewJournal && <JournalEntry />}
           </div>
         </div>
       )}
@@ -50,4 +51,11 @@ function SelectedPlant() {
   );
 }
 
+SelectedPlant.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }),
+};
 export default SelectedPlant;
