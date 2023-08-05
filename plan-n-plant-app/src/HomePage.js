@@ -17,6 +17,7 @@ function PlantsDisplay({ plants }) {
     });
   };
   console.log(plants)
+  
   return (
     <section className="plant-display">
       <h1 className="app-title">Welcome to Plan N' Plant!</h1>

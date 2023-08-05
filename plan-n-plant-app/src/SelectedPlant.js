@@ -10,7 +10,7 @@ function SelectedPlant() {
   console.log('selected', selectedPlant)
   useEffect(() => {
     if (selectedPlant) {
-      const apiKey = 'sk-UpTm64c81a707233d1724';
+      const apiKey = 'sk-M3Xs64cda388bdd101768';
       const plantId = selectedPlant.id;
       const plantDetailsQuery = `/details/${id}?key=${apiKey}`;
 
@@ -32,6 +32,7 @@ function SelectedPlant() {
           <p>Scientific name: {selectedPlant.scientific_name}</p>
           <p>Description: {selectedPlant.description}</p>
           <p>Family: {selectedPlant.family_common_name}</p>
+          <img src={selectedPlant.default_image.thumbnail} alt={selectedPlant.common_name} />
         </div>
       )}
     </div>
