@@ -14,6 +14,14 @@
   color: #6B8E23;
 }
 
+.plant-card {
+  background-color:#E6E6FA;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+}
+
 .plant-display > div {
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -23,8 +31,9 @@
   justify-content: center;
   align-items: center;
   margin: 10px;
+  margin-bottom: 70px;
   padding: 20px;
-  width: 300px;
+  width: 100%;
 }
 
 .plant-display img {
