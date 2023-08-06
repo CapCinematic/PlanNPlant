@@ -15,7 +15,7 @@ function SelectedPlant() {
   console.log("selected", selectedPlant);
 
   useEffect(() => {
-    const apiKey = "sk-M3Xs64cda388bdd101768";
+    const apiKey = "sk-9XOH64ced33198bb31777";
     const plantDetailsQuery = `/details/${id}?key=${apiKey}`;
     getData(plantDetailsQuery)
       .then((data) => setSelectedPlant(data))
@@ -27,7 +27,7 @@ function SelectedPlant() {
   }
 
   return (
-    <div>
+    <div className="view-plant">
        <div className='home-button'>
         <Link to="/"><p><span>⌂</span></p></Link> 
       </div>
