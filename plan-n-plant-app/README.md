@@ -21,8 +21,12 @@ Steps to install the project and how to get the development environment running:
 
 ## Usage
 
-![alt text]()
+![HomePage](/src/images/homepage.png)
+![Plant Details](/src/images/Selectedplant.png)
+![Journal](/src/images/journal.png)
+![Posted Entry](/src/images/postedentry.png)
 
 ## Contributing
 
-Instructions for how to contribute to the project and guidelines for pull requests.
+Isaiah Richardson 
+Github:https://github.com/CapCinematic
