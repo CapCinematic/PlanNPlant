@@ -44,7 +44,7 @@ const JournalEntry = () => {
             onChange={(event) => setEntry(event.target.value)}
           />
         </label>
-        <button type="submit">Add Entry</button>
+        <button className='submit-button'type="submit">Add Entry</button>
       </form>
       <h2>Journal Entries:</h2>
       <ul>

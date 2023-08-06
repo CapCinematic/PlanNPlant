@@ -1,0 +1,21 @@
+ {
+  "data" : [ 
+  {
+    "common_name": "Snake Plant",
+    "id": 1,
+    "default_image": {
+      "thumbnail": "string"
+    },
+    "watering": "Low",
+    "sunlight": ["Low"]
+  },
+  {
+    "common_name": "Spider Plant",
+    "id": 2,
+    "default_image": {
+      "thumbnail": "string"
+    },
+    "watering": "Medium",
+    "sunlight": ["Low", "Medium"]
+  }
+]}

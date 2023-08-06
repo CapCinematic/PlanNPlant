@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import SelectedPlant from "./SelectedPlant";
-import "./SelectedPlant.css";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import SelectedPlant from "./SelectedPlant";
 import PropTypes from "prop-types";
+import "./SelectedPlant.css";
+import "./HomePage.css";
 
 function PlantsDisplay({ plants }) {
   const [currentPlant, setCurrentPlant] = useState(null);

@@ -1,10 +1,10 @@
 import "./App.css";
 import PlantsDisplay from "./HomePage";
-import React, { useState, useEffect } from "react";
 import SelectedPlant from "./SelectedPlant";
 import getData from "./apiCalls";
-import { Route, Routes, Router, useNavigate } from "react-router-dom";
 import ErrorMessage from "./ErrorMessage";
+import React, { useState, useEffect } from "react";
+import { Route, Routes, Router, useNavigate } from "react-router-dom";
 
 function App() {
   const [plants, setPlants] = useState([]);
@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const easyPlants =
-      "-list?key=sk-M3Xs64cda388bdd101768&watering=minimum&indoor";
+      "-list?key=sk-9XOH64ced33198bb31777&watering=minimum&indoor";
 
     getData(easyPlants)
       .then((data) => {

@@ -1,0 +1,9 @@
+{
+  "common_name": "Snake Plant",
+  "scientific_name": "Sansevieria trifasciata",
+  "description": "The snake plant is a popular indoor plant known for its tall, upright leaves. It is native to West Africa and is often used as a decorative plant in homes and offices. The snake plant is easy to care for and can tolerate low light conditions and irregular watering.",
+  "cycle": "Perennial",
+  "default_image": {
+    "thumbnail": "string"
+  }
+}
