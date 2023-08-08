@@ -49,10 +49,14 @@ That's it! You should now be able to run the PlanNPlant app on your local machin
 
 ## Usage
 
-![HomePage](/public/images/newHome.png)
-![FavoritePlant](/public/images/favoriteOption.png)
-![Plant Details](/public/images/Selectedplant.png)
-![Journal](/public/images/journal.png)
+![HomePage](/public/images/newHome.png),
+
+![FavoritePlant](/public/images/favoriteOption.png),
+
+![Plant Details](/public/images/Selectedplant.png),
+
+![Journal](/public/images/journal.png),
+
 ![Posted Entry](/public/images/postedentry.png)
 
 ## Deployment Link
