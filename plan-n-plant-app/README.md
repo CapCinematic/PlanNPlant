@@ -49,10 +49,11 @@ That's it! You should now be able to run the PlanNPlant app on your local machin
 
 ## Usage
 
-![HomePage](/src/images/homepage.png)
-![Plant Details](/src/images/Selectedplant.png)
-![Journal](/src/images/journal.png)
-![Posted Entry](/src/images/postedentry.png)
+![HomePage](/public/images/newHome.png)
+![FavoritePlant](/public/images/favoriteOption.png)
+![Plant Details](/public/images/Selectedplant.png)
+![Journal](/public/images/journal.png)
+![Posted Entry](/public/images/postedentry.png)
 
 ## Deployment Link
 https://plan-n-plant-udbl.vercel.app/

@@ -12,7 +12,7 @@ function SelectedPlant() {
   const [selectedPlant, setSelectedPlant] = useState(undefined);
   const [viewJournal, setView] = useState(false);
   const handleView = () => setView(true);
-  console.log("selected", selectedPlant);
+  
 
   useEffect(() => {
     const apiKey = "sk-sUbp64d2900b4752a1803";
