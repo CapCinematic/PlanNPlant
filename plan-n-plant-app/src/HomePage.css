@@ -22,8 +22,13 @@
   padding: 20px;
 }
 
+.favorite{
+ background-color: #ffde08;
+}
+
+
 .plant-display > div {
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   display: flex;

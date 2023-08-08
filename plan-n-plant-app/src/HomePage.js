@@ -7,6 +7,7 @@ import "./HomePage.css";
 
 function PlantsDisplay({ plants }) {
   const [currentPlant, setCurrentPlant] = useState(null);
+  const [favoritePlants, setFavoritePlants] = useState([]);
 
   const handlePlantClick = (plant) => {
     setCurrentPlant((currentPlant) => {
@@ -17,12 +18,23 @@ function PlantsDisplay({ plants }) {
       }
     });
   };
-  console.log(plants);
 
+  const handleFavoriteClick = (plant) => {
+    if (favoritePlants.some((p) => p.id === plant.id)) {
+      setFavoritePlants(favoritePlants.filter((p) => p.id !== plant.id));
+    } else {
+      setFavoritePlants([...favoritePlants, plant]);
+    }
+  };
+
+  const isFavorite = (plant) => {
+    return favoritePlants.some((p) => p.id === plant.id);
+  };
+  console.log(favoritePlants)
   return (
     <section className="plant-display">
       <div className="app-title">
-      <h1>Welcome to Plan N' Plant!</h1>
+        <h1>Welcome to Plan N' Plant!</h1>
       </div>
       {plants.map((plant) => {
         const commonName = plant.common_name;
@@ -32,19 +44,25 @@ function PlantsDisplay({ plants }) {
         const sunNeeds = plant.sunlight.map((sun, index) => (
           <li key={index}>{sun}</li>
         ));
+        const isFav = isFavorite(plant);
+        const cardClass = isFav ? "plant-card favorite" : "plant-card";
+
         return (
-          <Link key={id} to={`/${id}`}>
-            <div
-              className="plant-card"
-              key={id}
-              onClick={() => handlePlantClick(plant)}
-            >
+          <div className={cardClass} key={id}>
+            <Link to={`/${id}`}>
               {plantImage && <img src={plantImage} alt={commonName} />}
               <p>Common Name: {commonName}</p>
-              <p>Watering: {waterNeeds}</p>
-              <p>Sunlight: {sunNeeds}</p>
-            </div>
-          </Link>
+            </Link>
+            <p>Watering: {waterNeeds}</p>
+            <p>Sunlight: {sunNeeds}</p>
+            <button onClick={() => handleFavoriteClick(plant)}>
+              {isFav ? "Remove from favorites" : "Add to favorites"}
+            </button>
+            <button onClick={() => handlePlantClick(plant)}>
+              {currentPlant && currentPlant.id === plant.id}
+              Learn more
+            </button>
+          </div>
         );
       })}
       {currentPlant && <SelectedPlant plant={currentPlant} />}
@@ -65,4 +83,22 @@ PlantsDisplay.propTypes = {
     }).isRequired
   ).isRequired,
 };
+
+
+PlantsDisplay.propTypes = {
+  plants: PropTypes.arrayOf(
+    PropTypes.shape({
+      common_name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      default_image: PropTypes.shape({
+        thumbnail: PropTypes.string.isRequired,
+      }),
+      watering: PropTypes.string.isRequired,
+      sunlight: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    }).isRequired
+  ).isRequired,
+};
+
 export default PlantsDisplay;
+
+

@@ -1,6 +1,6 @@
 describe("SelectedPlant component", () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://perenual.com/api/species/details/1?key=sk-9XOH64ced33198bb31777', { fixture: 'SelectedPlant.json' })
+    cy.intercept('GET', 'https://perenual.com/api/species/details/1?key=sk-sUbp64d2900b4752a1803', { fixture: 'SelectedPlant.json' })
     cy.visit("http://localhost:3000/1");
   });
 

@@ -1,6 +1,6 @@
 describe('Plan N Plant App', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://perenual.com/api/species-list?key=sk-9XOH64ced33198bb31777&watering=minimum&indoor', { fixture: 'HomePage.json' })
+    cy.intercept('GET', 'https://perenual.com/api/species-list?key=sk-sUbp64d2900b4752a1803&watering=minimum&indoor', { fixture: 'HomePage.json' })
     cy.visit('http://localhost:3000/')
   })
 
@@ -15,8 +15,8 @@ describe('Plan N Plant App', () => {
   })
 
   it('displays an error message when the API returns an error', () => {
-    cy.intercept('GET', 'https://perenual.com/api/species-list?key=sk-9XOH64ced33198bb31777&watering=minimum&indoor', { statusCode: 500 });
-    cy.visit('http://localhost:3000/*');
+    cy.intercept('GET', 'https://perenual.com/api/species-list?key=sk-sUbp64d2900b4752a1803&watering=minimum&indoor', { statusCode: 500 });
+    cy.visit('http://localhost:3000/*', {statusCode: 404});
     cy.get('.error-message p').should('contain', 'Ooops, please try to reload or try again later!');
   });
 
