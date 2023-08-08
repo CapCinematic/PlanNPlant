@@ -47,9 +47,6 @@ npm start
 
 That's it! You should now be able to run the PlanNPlant app on your local machine.
 
-## Deployment Link
-https://plan-n-plant-udbl.vercel.app/
-
 ## Contributing
 
 Isaiah Richardson 
