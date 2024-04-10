@@ -8,5 +8,16 @@
   margin-bottom: 20px;
   text-align: center;
   color: #d1eb9f;
-  text-shadow: black 5px 1px 1px;
+  text-shadow: black 1px 1px 1px;
+}
+
+.home-button{ 
+  background-color: #6B8E23;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
 }

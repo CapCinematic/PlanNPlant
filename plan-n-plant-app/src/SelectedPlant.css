@@ -136,15 +136,3 @@ cursor: pointer;
 border-radius: 12px;
 }
 
-.home-button {
-display: flex;
-flex-direction: column;
-background-color:white;
-margin-top: 10px;
-border-radius: 50%;
-box-shadow: 3px 10px 7px rgba(0, 0, 0, 0.5);
-}
-
-.home-button a {
-font-size: 1.5rem;
-}

@@ -29,14 +29,14 @@ function PlantsDisplay({ plants }) {
   };
 
   const isFavorite = (plant) => {
-    return favoritePlants.some((p) => p.id === plant.id);
+    if (favoritePlants > 0) {
+      return favoritePlants.some((p) => p.id === plant.id);
+    } 
   };
   console.log(favoritePlants)
   return (
     <section className="plant-display">
-      <div className="app-title">
         <Banner />
-      </div>
       {plants.map((plant) => {
         const commonName = plant.common_name;
         const id = plant.id;
@@ -45,7 +45,7 @@ function PlantsDisplay({ plants }) {
         const sunNeeds = plant.sunlight.map((sun, index) => (
           <li key={index}>{sun.toUpperCase()}</li>
         ));
-        const isFav = isFavorite(plant);
+        const isFav = isFavorite(plant.id);
         const cardClass = isFav ? "plant-card favorite" : "plant-card";
 
         return (

@@ -6,9 +6,6 @@ const ErrorMessage = ({ message }) => {
     <div className="error-container">
       <div className="error-message">
         {message ? <p>{message}</p> : <p>Ooops, please try to reload or try again later!</p>}
-        <div className='home-button'>
-        <Link to="/"><p><span>⌂</span></p></Link> 
-      </div>
       </div>
     </div>
   );
