@@ -2,6 +2,7 @@ import "./App.css";
 import PlantsDisplay from "./HomePage";
 import SelectedPlant from "./SelectedPlant";
 import getData from "./apiCalls";
+import getDummyData from "./getDummyData";
 import ErrorMessage from "./ErrorMessage";
 import React, { useState, useEffect } from "react";
 import { Route, Routes, } from "react-router-dom";
@@ -11,10 +12,18 @@ function App() {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    const easyPlants =
-      "-list?key=sk-sUbp64d2900b4752a1803&watering=minimum&indoor";
+    // const easyPlants =
+    //   "-list?key=sk-gDEl6616daae842301803&watering=minimum&indoor";
 
-    getData(easyPlants)
+    // getData(easyPlants)
+    //   .then((data) => {
+    //     setPlants(data.data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     setErrorMessage("Error retrieving plant data. Please try again later.");
+    //   });
+    getDummyData()
       .then((data) => {
         setPlants(data.data);
       })

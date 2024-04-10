@@ -1,5 +1,5 @@
 .plant-display {
-  background-color: #F5F5F5;
+  background: radial-gradient(circle, rgba(12, 47, 92, 0.9) 0%, rgba(55, 98, 66, 0.78) 100%);
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -7,38 +7,48 @@
 }
 
 .app-title {
+  background-image: url("/public/images/plant-title.JPEG");
+  background-size: cover;
+  background-position: center;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: #6B8E23;
+  color: #d1eb9f;
+  text-shadow: black 5px 1px 1px;
 }
 
 .plant-card {
-  background-color:#E6E6FA;
+  background-image: url("/public/images/plant-card-bg.JPEG");
+  background-size: cover;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
+  border: black 5px solid;
 }
 
-.favorite{
- background-color: #ffde08;
+.plant-card img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.788) 1px 3px 2px 6px;
 }
 
+.favorite {
+  background-color: #ffde08;
+}
 
 .plant-display > div {
-  /* background-color: #FFFFFF; */
   border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 70px; /* Adjusted margin bottom */
   padding: 20px;
-  width: 100%;
+  width: calc(33.33% - 20px); /* Adjusted width */
 }
 
 .plant-display img {
@@ -48,7 +58,32 @@
 }
 
 .plant-display p {
-  font-size: 18px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: rgb(14, 14, 14) 5px 5px 5px;
   margin: 0;
-  color: #6B8E23;
+  color: #e4e8dc;
+  margin: 5px;
+}
+
+.button {
+  background-color: #66910f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.favorite {
+  border-radius: 13px;
+  margin-bottom: 3px;
+}
+
+.learn-more {
+  border-radius: 5px;
 }

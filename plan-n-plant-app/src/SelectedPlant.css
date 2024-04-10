@@ -1,177 +1,150 @@
+.view-plant,
 .selected-plant {
-  background-color: #FAFAD2;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+background-color: #FAFAD2;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
+.view-plant h2,
 .selected-plant h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #6B8E23;
+font-size: 36px;
+font-weight: bold;
+margin-bottom: 20px;
+text-align: center;
+color: #6B8E23;
 }
 
+.view-plant img,
 .selected-plant img {
-  border-radius: 10px;
-  margin-bottom: 10px;
-  max-width: 100%;
+border-radius: 10px;
+margin-bottom: 10px;
+max-width: 100%;
 }
 
-.selected-plant button {
-  background-color: #6B8E23;
-  border: none;
-  border-radius: 10px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
+.view-plant button,
+.selected-plant button,
+.journal button {
+background-color: #6B8E23;
+border: none;
+border-radius: 10px;
+color: #FFFFFF;
+cursor: pointer;
+font-size: 18px;
+margin-bottom: 20px;
+padding: 10px 20px;
 }
 
-.selected-plant button:hover {
-  background-color: #9ACD32;
+.view-plant button:hover,
+.selected-plant button:hover,
+.journal button:hover {
+background-color: #9ACD32;
 }
 
 .journal {
-  background-color:#E6E6FA ;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+background-color:#E6E6FA ;
 }
 
 .journal h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #6B8E23;
+font-size: 36px;
+font-weight: bold;
+margin-bottom: 20px;
+text-align: center;
+color: #6B8E23;
 }
 
 .journal form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
 }
 
 .journal label {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #FF6347;
+font-size: 18px;
+margin-bottom: 10px;
+color: #FF6347;
 }
 
 .journal input[type="text"],
 .journal textarea {
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 100%;
+border: none;
+border-radius: 10px;
+font-size: 18px;
+margin-bottom: 20px;
+padding: 10px;
+width: 100%;
 }
 
 .journal textarea {
-  height: 200px;
+height: 200px;
 }
-.journal-open  {
-  background-color: #D8BFD8;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-}
-
 
 .journal button[type="submit"] {
-  background-color: #6B8E23;
-  border: none;
-  border-radius: 10px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 20px;
-  padding: 10px 20px;
-}
-
-.journal button[type="submit"]:hover {
-  background-color: #9ACD32;
+margin-top: 20px;
 }
 
 .journal h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-  color: darkorchid;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+text-align: center;
+color: darkorchid;
 }
 
 .journal ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 .journal li {
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px #E6E6FA;
-  margin-bottom: 20px;
-  padding: 20px;
-  width: 100%;
+background-color: #FFFFFF;
+border-radius: 10px;
+box-shadow: 1px 1px 10px #E6E6FA;
+margin-bottom: 20px;
+padding: 20px;
+width: 100%;
 }
 
 .journal li h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #bc41bc;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+color: #bc41bc;
 }
 
 .journal li p {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #6B8E23;
+font-size: 18px;
+margin-bottom: 10px;
+color: #6B8E23;
 }
 
-.journal button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
+.journal-open  {
+background-color: #D8BFD8;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;
 }
 
 .home-button {
-  display: flex;
-  flex-direction: column;
-  background-color:white;
-  margin-top: 10px;
-  border-radius: 50%;
-  box-shadow: 3px 10px 7px rgba(0, 0, 0, 0.5);
+display: flex;
+flex-direction: column;
+background-color:white;
+margin-top: 10px;
+border-radius: 50%;
+box-shadow: 3px 10px 7px rgba(0, 0, 0, 0.5);
 }
 
 .home-button a {
 font-size: 1.5rem;
-font-weight: bold;
-text-decoration: none;
-color: rgb(61, 60, 60);
-margin: 0;
 }
