@@ -1,0 +1,12 @@
+.banner {
+  height: 300px;
+  background-image: url("/public/images/plant-title.JPEG");
+  background-size: cover;
+  background-position: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d1eb9f;
+  text-shadow: black 5px 1px 1px;
+}
