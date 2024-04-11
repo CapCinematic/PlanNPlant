@@ -5,7 +5,7 @@ const ErrorMessage = ({ message }) => {
   return (
     <div className="error-container">
       <div className="error-message">
-        {message ? <p>{message}</p> : <p>Ooops, please try to reload or try again later!</p>}
+        {message ? <p>{message}</p> : <p>Loading...</p>}
       </div>
     </div>
   );
