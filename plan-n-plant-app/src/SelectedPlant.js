@@ -16,13 +16,11 @@ function SelectedPlant() {
   const handleView = () => setView(true);
 
   useEffect(() => {
-    getDummyData().then((data) => {
-      console.log("data",data.data);
-      setSelectedPlant(data.data.find(plant => plant.id === parseInt(id)));
-    }).catch((error) => {
-      console.error(error);
-      setErrorMessage("Error retrieving plant data. Please try again later.");
-    });
+    const apiKey = "sk-BNId66175ecab58f51724";
+    const plantDetailsQuery = `/details/${id}?key=${apiKey}`;
+    getData(plantDetailsQuery)
+      .then((data) => setSelectedPlant(data))
+      .catch((error) => setErrorMessage(error.errorMessage));
   }, [id]);
 
   // useEffect(() => {
