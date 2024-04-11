@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="banner">
       <h1>Welcome to Plan N' Plant!</h1>
       <div className="home-button">
-        <Link to="/"> ⌂ Home </Link>
+        <Link to="/"> ⌂ </Link>
       </div>
     </div>
   );

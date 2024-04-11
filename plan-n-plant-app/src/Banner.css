@@ -1,23 +1,42 @@
 .banner {
-  height: 300px;
+  display: flex;
+  height: 200px;
+  width: 100%;
   background-image: url("/public/images/plant-title.JPEG");
   background-size: cover;
-  background-position: center;
   font-size: 36px;
   font-weight: bold;
+  margin-top: 20px ;
   margin-bottom: 20px;
   text-align: center;
   color: #d1eb9f;
   text-shadow: black 1px 1px 1px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(15, 77, 128) 2px 5px 20px;
+  border-radius: 10px;
 }
 
 .home-button{ 
-  background-color: #6B8E23;
+  background:radial-gradient(circle at 50% 107%, #fcfcfc, #47833d 50%, #4688ec 50%, #0d3b18 100%);
   border: none;
-  border-radius: 10px;
+  border-radius: 100%;
   color: #FFFFFF;
   cursor: pointer;
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
+  font-size: 35px;
+  padding: 25px;
+  width: 55px;
+  height: 55px;
+  box-shadow: 1px 5px 5px 1px #000000;
+}
+
+h1 {
+margin-right: 30px;
+text-shadow: #000000 10px 1px 1px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
