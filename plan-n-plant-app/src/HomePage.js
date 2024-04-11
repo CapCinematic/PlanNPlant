@@ -34,9 +34,9 @@ function PlantsDisplay({ plants }) {
     } 
   };
   console.log(favoritePlants)
+
   return (
     <section className="plant-display">
-        <Banner />
       {plants.map((plant) => {
         const commonName = plant.common_name;
         const id = plant.id;
@@ -47,7 +47,6 @@ function PlantsDisplay({ plants }) {
         ));
         const isFav = isFavorite(plant.id);
         const cardClass = isFav ? "plant-card favorite" : "plant-card";
-
         return (
           <div className={cardClass} key={id}>
             <Link to={`/${id}`}>

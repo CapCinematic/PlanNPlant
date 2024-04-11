@@ -19,6 +19,7 @@
 }
 
 .plant-card {
+  display: flex;
   background-image: url("/public/images/plant-card-bg.JPEG");
   background-size: cover;
   border-radius: 10px;
@@ -59,11 +60,19 @@
 
 .plant-display p {
   font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-shadow: rgb(14, 14, 14) 5px 5px 5px;
-  margin: 0;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: #000000 1px 5px 10px;
   color: #e4e8dc;
-  margin: 5px;
+  margin: 10px;
+}
+
+li {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: #000000 1px 5px 10px;
+  color: #e4e8dc;
 }
 
 .button {
