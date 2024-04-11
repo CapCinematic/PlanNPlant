@@ -2,6 +2,7 @@ import "./App.css";
 import PlantsDisplay from "./HomePage";
 import SelectedPlant from "./SelectedPlant";
 import getData from "./apiCalls";
+import Banner from "./Banner";
 import getDummyData from "./getDummyData";
 import ErrorMessage from "./ErrorMessage";
 import React, { useState, useEffect } from "react";
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      <Banner />
       <Routes>
         <Route path="/" element={<PlantsDisplay plants={plants} />} />
         <Route path="/:id" element={<SelectedPlant />} />
