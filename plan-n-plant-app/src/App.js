@@ -2,9 +2,10 @@ import "./App.css";
 import PlantsDisplay from "./HomePage";
 import SelectedPlant from "./SelectedPlant";
 import getData from "./apiCalls";
+import Banner from "./Banner";
 import ErrorMessage from "./ErrorMessage";
 import React, { useState, useEffect } from "react";
-import { Route, Routes, } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [plants, setPlants] = useState([]);
@@ -12,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const easyPlants =
-      "-list?key=sk-sUbp64d2900b4752a1803&watering=minimum&indoor";
+      "-list?key=sk-BNId66175ecab58f51724&watering=minimum&indoor";
 
     getData(easyPlants)
       .then((data) => {
@@ -24,10 +25,9 @@ function App() {
       });
   }, []);
 
-
-
   return (
     <div className="App">
+      <Banner />
       <Routes>
         <Route path="/" element={<PlantsDisplay plants={plants} />} />
         <Route path="/:id" element={<SelectedPlant />} />

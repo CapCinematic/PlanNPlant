@@ -4,6 +4,7 @@ import SelectedPlant from "./SelectedPlant";
 import PropTypes from "prop-types";
 import "./SelectedPlant.css";
 import "./HomePage.css";
+import Banner from "./Banner";
 
 function PlantsDisplay({ plants }) {
   const [currentPlant, setCurrentPlant] = useState(null);
@@ -28,25 +29,24 @@ function PlantsDisplay({ plants }) {
   };
 
   const isFavorite = (plant) => {
-    return favoritePlants.some((p) => p.id === plant.id);
+    if (favoritePlants > 0) {
+      return favoritePlants.some((p) => p.id === plant.id);
+    } 
   };
   console.log(favoritePlants)
+
   return (
     <section className="plant-display">
-      <div className="app-title">
-        <h1>Welcome to Plan N' Plant!</h1>
-      </div>
       {plants.map((plant) => {
         const commonName = plant.common_name;
         const id = plant.id;
         const plantImage = plant.default_image && plant.default_image.thumbnail;
         const waterNeeds = plant.watering;
         const sunNeeds = plant.sunlight.map((sun, index) => (
-          <li key={index}>{sun}</li>
+          <li key={index}>{sun.toUpperCase()}</li>
         ));
-        const isFav = isFavorite(plant);
+        const isFav = isFavorite(plant.id);
         const cardClass = isFav ? "plant-card favorite" : "plant-card";
-
         return (
           <div className={cardClass} key={id}>
             <Link to={`/${id}`}>
@@ -55,10 +55,10 @@ function PlantsDisplay({ plants }) {
             </Link>
             <p>Watering: {waterNeeds}</p>
             <p>Sunlight: {sunNeeds}</p>
-            <button onClick={() => handleFavoriteClick(plant)}>
+            <button className="favorite" onClick={() => handleFavoriteClick(plant)}>
               {isFav ? "Remove from favorites" : "Add to favorites"}
             </button>
-            <button onClick={() => handlePlantClick(plant)}>
+            <button className="learn-more" onClick={() => handlePlantClick(plant)}>
               {currentPlant && currentPlant.id === plant.id}
               Learn more
             </button>
