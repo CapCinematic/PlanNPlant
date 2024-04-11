@@ -43,7 +43,6 @@ function SelectedPlant() {
 
   return (
     <div className="view-plant">
-      <Banner />
       <h2>{selectedPlant.common_name}</h2>
       {selectedPlant && (
         <div>

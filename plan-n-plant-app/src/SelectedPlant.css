@@ -1,6 +1,6 @@
 .view-plant,
 .selected-plant {
-background-color: #FAFAD2;
+background: radial-gradient(circle, rgba(245, 245, 245, 0.9) 0%, rgba(55, 98, 66, 0.78) 100%);
 padding: 20px;
 display: flex;
 flex-direction: column;
@@ -10,11 +10,14 @@ align-items: center;
 
 .view-plant h2,
 .selected-plant h2 {
-font-size: 36px;
+font-size: 50px;
 font-weight: bold;
 margin-bottom: 20px;
 text-align: center;
 color: #6B8E23;
+text-decoration: underline;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-shadow: #000000 1px 1px 1px;
 }
 
 .view-plant img,
@@ -35,24 +38,42 @@ cursor: pointer;
 font-size: 18px;
 margin-bottom: 20px;
 padding: 10px 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-shadow: #000000 1px 1px 1px;
 }
 
 .view-plant button:hover,
 .selected-plant button:hover,
 .journal button:hover {
-background-color: #9ACD32;
+transition: ease-in-out 0.3s;
+background-color: #3c520f;
+color: rgb(255, 255, 255);
+text-shadow: #0162ff 1px 1px 1px;
+}
+
+p { 
+font-size: 22px;
+margin-bottom: 10px;
+color: #000000;
+text-shadow: #000000 1px 1px 7px;
 }
 
 .journal {
 background-color:#E6E6FA ;
+background-image: url("/public/images/plant-card-bg.JPEG");
+background-size: cover;
+border-radius: 10px;
+box-shadow: #000000 1px 1px 10px;
 }
 
-.journal h1 {
+.journal h3 {
 font-size: 36px;
 font-weight: bold;
 margin-bottom: 20px;
 text-align: center;
 color: #6B8E23;
+text-shadow: #000000 1px 1px 1px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .journal form {
@@ -87,6 +108,7 @@ margin-top: 20px;
 }
 
 .journal h2 {
+text-shadow: #000000 1px 1px 1px;
 font-size: 24px;
 font-weight: bold;
 margin-bottom: 10px;

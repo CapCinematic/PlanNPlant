@@ -18,7 +18,7 @@ const JournalEntry = () => {
 
   return (
     <div className="journal">
-      <h1>My Journal</h1>
+      <h3>My Journal</h3>
       <form onSubmit={handleSubmit}>
         <label>
           Date:
