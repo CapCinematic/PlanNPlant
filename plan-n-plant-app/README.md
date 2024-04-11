@@ -53,6 +53,7 @@ That's it! You should now be able to run the PlanNPlant app on your local machin
 ![Plant Details](/public/images/PNPSelected.png)
 ![Journal](/public/images/PNPJournal.png)
 
+
 ## Deployment Link
 https://plan-n-plant-udbl.vercel.app/
 

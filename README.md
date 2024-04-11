@@ -47,18 +47,9 @@ npm start
 
 That's it! You should now be able to run the PlanNPlant app on your local machine.
 
-## Usage
-
-![HomePage](/src/images/homepage.png)
-![Plant Details](/src/images/Selectedplant.png)
-![Journal](/src/images/journal.png)
-![Posted Entry](/src/images/postedentry.png)
-
-## Deployment Link
-https://plan-n-plant-udbl.vercel.app/
-
 ## Contributing
 
 Isaiah Richardson 
 Github:https://github.com/CapCinematic
 LinkedIn:https://www.linkedin.com/in/isaiah-cap-richardson/
+
